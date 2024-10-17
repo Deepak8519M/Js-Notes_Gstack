@@ -1,0 +1,1615 @@
+<!-- JS is a scripting language that is used to create interactive and dynamic websites.
+
+here interactive means: User can perform some operation or action in the website
+
+        1)Button Click
+        2)Submit a form
+        3)Write Comments
+        4)Live Chat
+
+Dynamic means the websites that changes the content or layout
+
+        1)Sliding effect
+        2)E-commerce website
+        3)Quiz Website
+
+It is most popular programming lang used in google facebook twitter etc...
+
+It has some most popular frameworks and libraries that reduce your time to create websites and moblie apps.
+
+Like, angular,react,vue.js etc...
+
+it has lot of job oportunites.
+
+it is used in Back-end Development, Mobile-app Dev, Desktop-app Dev, Game-Dev, Api Creation.
+
+Try to build some projects.
+
+1.  Linking Js:
+
+    You can link to js using script tag
+
+        i.e, Method-1: <script>alert("");</script> (in head tag,within html file)
+             Method-2: <script>alert("");</script> (in body tag,withing html file)
+
+             Method-3: <script src="app.js"></script> in body tag or head tag and seperate js file. (external attachment or file)
+
+2.  Display:
+
+    There are multiple ways to display text using js in website, webpage or browser.
+
+            document.write("welcome"); - prints on webpage
+
+            console.log("Hi"); - prints on console of webpage.
+                (You can even use console to write js code for performing some simple operations)
+
+3)  Variables Js:
+
+    It is like an container to store data.
+
+         We can use (var, let, const) keywords to create variables.
+
+         like,  var X; const Y; let Z; where var is oldest and let is the newest in es-6 which we will learn at later.
+
+         we can assign value to variables using assignment operator;
+         like, var u = 5;
+
+         variables name should start with alphabet, dollar-sign($) or underscore (_);
+
+         it is case sensitive;
+
+         1. let - when created the variable is only visible within the block in which it is declared.
+
+         It can cause reference error.
+
+         2. var -
+
+         3. const - const keyword is used to declare a constant variable such that the variable cant be re-assigned.
+
+         Can cause type error.
+
+4)  Scope:
+
+    It refers to the visibility of variables and functions within a program.
+
+    There are 3 types of scopes:
+        1)Global Scope
+        2)Function Scope
+        3)Block Scope
+
+
+            Global -  it is the outermost scope in an javascript program. Variables and functions declared in  the global scope are visible and accessible from anywhere  in the program.
+
+                            var x = "hello";
+                             function example() {
+                               console.log(x);
+                             }
+
+                             example();
+
+
+            Function Scope - Fscope is created when a function is declared. Variables and functions declared in  the function scope are  only visible and accessible within that function.
+
+                            function exam() {
+                                var fs = "hi";
+                                console.log(fs);
+                            }
+                            exam();
+
+
+                            Causes reference error not defined;
+
+
+            Block Scope - It refers to the visibility of variables and funcitons within a block of code.
+
+
+            A block of code are the group of stats that are enclose within curly braces({}).
+
+            only visible and accessible within the block.
+
+                            function a() {
+                            if (true) {
+                                let bv = "hi";
+                                console.log(bv); // no error
+                            }
+                            console.log(bv); //error not defined occurs
+                            }
+                            a();
+                            console.log(bv); //error not defined occurs
+
+
+5)Data Types:
+
+    It tells about what type of data, a particular variable can hold.
+
+    To perform any task or operation with the data it is important to know it's type.
+
+
+    It is primarily divided into 2 categories.
+
+        1)Primitive Dtypes - String, Number, Boolean, Null, Undefined, BigInt, Symbol.
+
+        2)Reference Dtypes - Object, Array, Function.
+
+        Primitive Dtypes:
+
+            1.String: In Js string is a sequence or collection of 0 or more characters.
+
+                      it starts and ends with either a single quote(') or double quote(").
+
+                      it is for storing and manipulating text.
+
+                            ex: let var = "elon";
+                                let gav = 'kyle';
+
+                                let a = "10"; - it is an string.
+
+                                to check it we use typeof operator();
+
+                                i.e,  console.log(typeof x);
+
+
+            2.Numbers: It reprs integer an floating point numbers.
+
+                            ex: let num = 100; - integer
+                                let nums = 96.5; - float
+
+                                for example if,
+
+                                   let nums = 96.0;  - then conversion takes place from floating to integer.  i.e(it prints - 96)
+
+
+
+            3.Boolean: It has 2 values True and False.
+
+                            ex: let learning = true;
+                                let completed = false;
+
+                                console.log(learning); - true.
+
+                        We can also store result of any expression.
+
+                            ex: let x = 13<2;
+                                console.log(x); - false.
+
+            4.Null: In Js null is a special value that represents empty or unknown value.
+
+
+                            ex: let num = null;
+                                console.log(num); - null.
+
+                                console.log(typeof num); - object. -----}  It is a known bug in Js
+
+
+                    Note: In Js null = undefined -} console.log(null == undefined); - true.
+
+            5.Undefined: If a var is declared but the value is not assigned, then the value of that var will be undefined.
+
+            And the datatype is also undefined.
+
+                            ex:let age;
+                               console.log(age); - undefined.
+                               console.log(typeof age); - undefined.
+
+
+
+            6.BigInt:
+
+            7.Symbol:
+
+
+        Reference Dtypes:
+
+            1.Object: An obj is a collection of properties.
+
+                      Where each property is defined as a key-value pair.
+
+                      An obj can store diff dtypes.
+
+                      It can also withold other obj's.
+
+
+                            let person = {
+                                firstName: "Elon",
+                                lastName: "Musk",
+                                age: 39,
+                            };
+                            console.log(person); - prints the values in the obj.
+                            console.log(typeof person); object as result.
+
+            2.Array: It is an type of obj that can store collection of values.
+
+
+                            let number = [1, 2, 3, 4, 5];
+                            console.log(number); - (5) [1, 2, 3, 4, 5]
+                            console.log(typeof number); - object
+
+
+                    We can use indexes and loops to access these values.
+
+            3.Function: It is a type of obj that can be used to exec code.
+
+                        It is created using Function keyword followed by func_Name.
+
+
+                        function msg() {
+                            console.log("Hello");
+                        }
+
+                        msg(); - Hello.
+                        console.log(typeof msg); - Function (Note: It prints it as an function but it is also an obj
+
+                                                             Note2: As seen before in a certain short video in youtube it is said that function and varibles are similar - once if you see this msg during the 6th or 7th revision look back into the short and understand about it)
+
+
+                NOTE: Js is dynamically typed language.
+
+                Dynamically typed language:A dynamically typed language is a programming language where the type of a variable is determined at runtime, rather than at compile-time. This means you don't have to declare the data type of a variable when you write your code. The interpreter or runtime system automatically infers the type based on the variable's value during execution.
+
+                Common examples of dynamically typed languages include Python, JavaScript, Ruby, and PHP
+
+                    So it is easy to store diff dtypes in the same variable.
+
+                            let x;
+                            console.log(x); - undefined.
+                            console.log(typeof x); - undefined.
+
+                            x = 10;
+                            console.log(x); - 10.
+                            console.log(typeof x); - number.
+
+                            x = "Hi";
+                            console.log(x); - Hi.
+                            console.log(typeof x); - string.
+
+
+6) Operators:
+
+            Operators are symbols in js.
+
+            These are used to perform operations on operands.
+
+            Operands are the values or variables.
+
+
+            ex: 10+20; -  where 10,20 - operands | + -> opearator
+
+
+            Types of Operators:
+
+                    1)Arithmetic Operators.
+                    2)Assignment Operators.
+                    3)Comparison Operators.
+                    4)Logical Operators.
+                    5)String Operators.
+
+
+
+                        1)Arithmetic Operators: These are used to perform mathematical operations on operands.
+
+                            Like, Addition(+), Substraction(-), Multiplication(*), Division(/), Modulus(%), Exponent(num1 ** num2 ).
+
+
+                        2)Assignment Operators: These are used to assign values to varaibles.
+
+                            ex: let x = 5;
+
+                                let x += 6; -> x = x+6; => x = 11.
+
+
+                            We have several assignment opertors Like,
+
+                            (num1 += num2), (num1 -= num2), (num1 *= num2), (num1 / num2), (num1 %= num2), (num1 **= num2)
+
+                        3) Incremental and Decremental Operators:
+
+                                    These are  mainly used to increment or decrment the value of varialbe by 1 value.
+
+                                    ex: (++), (--)
+
+                                    These can be used in 2 ways: 1)Prefix 2)Postfix
+
+                                            let a = 10;
+                                            console.log(++a); - 11
+                                            console.log(a); - 11
+
+                                            let a = 10;
+                                            console.log(a++); - 10
+                                            console.log(a); -11
+
+
+                        4)Comparison Operators:
+
+                                    These operators are used to compare two values and give back a result in form of boolean value: either true or false.
+
+                                    These are mainly useful in decision-making and loop programs in js.
+
+
+                                    The operators include:
+
+                                            <   (less than)
+                                            >   (greater than)
+                                            <=  (less than or equal to)
+                                            >=  (greater than or equal to)
+
+                                            ==  (equality checks)
+                                            !=  (inequality) (not equal) (flipped or negation of equality check value)
+
+
+                                            === (Strict equality checks) (It mainly checks the datatype and later compare it with other value)
+                                            !== (Strict inequality checks) (flipped or negation of strict equality check value)
+
+
+                                            let a = 10;
+                                            let b = 20;
+
+                                            console.log(a < b); - true
+                                            console.log(a > b); - false
+                                            console.log(a <= b); - true
+                                            console.log(a >= b); - false
+
+                                            console.log(a == b); - false
+                                            console.log(a != b); - true
+
+                                            console.log(a === b); - false
+                                            console.log(a !== b); - true
+
+
+<------------------------------------------------------------------------------------------------------------------>
+
+<!-- Strict Equality and Strict Unequality theory detail:
+
+        In JavaScript, the strict equality (===) and strict inequality (!==) operators are used to compare values while considering both their type and value. These operators do not perform type coercion, which means if the types are different, the comparison will return false (or true for strict inequality).
+
+
+            5 === 5    // true (same value and type)
+            5 === "5" // false (same value but different type)
+            true === 1 // false (different types: boolean vs number)
+            null === undefined // false (different types)
+
+            Using strict equality (===) and strict inequality (!==) ensures that both the value and the type are considered, providing more accurate comparisons.
+
+
+        In JavaScript, the == (loose equality) and != (loose inequality) operators perform type coercion before comparing values. Type coercion means JavaScript tries to automatically convert one or both values to the same type before making the comparison. This can sometimes lead to unexpected results because the actual types of the values are ignored, and only the converted values are compared.
+
+        On the other hand, the === (strict equality) and !== (strict inequality) operators do not perform type coercion. They compare both the type and the value directly, which makes the comparison more predictable and accurate.
+
+        Why does this matter?
+
+        When you use ==, JavaScript tries to help by converting data types behind the scenes, but this can sometimes result in unexpected behavior or bugs. Using === makes sure that both the value and the type are exactly what you expect.
+
+        Summary:
+
+        == (loose equality): Converts the values to the same type before comparing, which can lead to surprising results.
+
+        === (strict equality): Compares both the type and the value without any type conversion, leading to more predictable results.
+
+        That's why it's generally a good idea to use === and !== in JavaScript to avoid the confusion caused by type coercion.  -->
+
+<------------------------------------------------------------------------------------------------------------------>
+
+                        5)Logical Operators: These are used to perform logical operations like,
+
+                                             1)AND (&&)
+                                             2)OR  (||)
+                                             3)NOT (!)
+
+
+                                            1) AND : It evaluates operands and return true only if all the operands are true.
+
+                                            2) OR : It evaluates operands and return true only if either on of the operands is true.
+
+                                            3) NOT : It negates i.e inveses the given value into either true or false.
+
+
+                                                    ex: let x = 10;
+                                                        let y = 20;
+
+                                                        console.log(x > 0 && y < 0);    - false
+                                                        console.log(x > 0 || y < 0);    - true
+                                                        console.log(!(x > 0 && y < 0)); - true
+
+
+                        6)String Operators: These are certain operations performed on strings.
+
+                        Like, {concatentaion(combining) operation using +}.
+
+                            let a = "hi";
+                            a += " hello";
+                            console.log(a); - hi hello
+
+                            (or)
+
+                            console.log("Hi" + " How") - Hi How
+
+                        7) Bitwise Operators : These are very rarely used operators in Js.
+
+7.  Operator Precedence:
+
+                Operator Precedence in Js determines the order in which operators are used or performed first when there are more than one diff operators.
+
+                ex: let a = 4 + 3 * 2; -> 10. here multiplication(*) has more priority than addition (+).
+
+8.  Operator Associativity:
+
+                 Operator Associativity in Js defines the order in which operators of the same precedence are evaluated.
+
+                 These are of 2 types:
+
+                         1)Left to Right Associativity - operators are evaluated from left to right
+                         2)Right to Left Associativity - operators are evaluated from right to left
+
+
+                         Left to Right Associativity
+                             ex: let a = 4 - 3 - 1;
+                             here, for substraction the associativity is from left to right. So (4-3-1) operation takes place later  there is an another operator (=) whose associativity is from right to left so the resulted value i.e 0 is assigned to a variable hence the value of a = 0.
+
+                         Right to Left Associativity
+                             ex: let result = 2 ** 3 ** 2;
+
+                             1st -  3 ** 2 = 9
+                             2nd -  2 ** 9 = 512
+
+9)Control Flow Statements: These are used to control the flow of execution of statements.
+
+                            They are used to make decisions, execute loops, and handle errors.
+
+                            There are 3 types of Cfstats:
+
+                                    1)Conditional Stats
+                                    2)Loops
+                                    3)Try-Catch Stats
+
+10)Conditional Statements: These are mainly used to execute diff sections of code based on diff conditions.
+
+                           These are :
+
+                                    1)if statement
+                                    2)if-else statement
+                                    3)else if statement
+
+                                    let age = 17;
+
+                                    if (age >= 18 && age <= 22) {
+                                    console.log("You are an Major");
+                                    } else if (age > 23) {
+                                    console.log("You are Adult");
+                                    } else {
+                                    console.log("You are teen");
+                                    }
+
+
+                            4)Switch Statements:  It is also an condtional stat that is used to exec block of code based on the value of an expression.
+
+                                    ex: let val = "Hi";
+
+                                        switch (typeof val) {
+
+                                        case "number":
+                                                    console.log("Number");
+                                                    break;
+
+                                        case "string":
+                                                    console.log("string");
+                                                    break;
+
+                                        case "boolean":
+                                                    console.log("boolean");
+                                                    break;
+
+                                        case "Undefined":
+                                                    console.log("Undefined");
+                                                    break;
+
+                                        default:
+                                                    console.log("Other Dtypes");
+                                                    break;
+                                        }
+
+                            5)Ternary Operator: It works similar to if - else statement but it works with an single line of code.
+
+                                        Syntax:     Condition ? value_if_true : value_if_false
+
+                                        ex: let age = 20;
+                                            let msg = age > 18 ? "You are an Adult" : "You are a minor";
+                                            console.log(msg);
+
+11)Loops: It is used to execute a block of statements several times based on the condition.
+
+          For Loop Syntax: for(let i = 0; i < 10; i++){
+
+                            //code to be repeated
+
+                           }
+
+
+                ex1:            for (let i = 0; i <= 12; i++) {
+                                console.log("HI");
+                                }
+
+
+                ex2:            let coding = ["Js", "Python", "C"];
+                                for (i = 0; i < coding.length; i++) {
+                                console.log(coding[i]);
+                                }
+
+
+
+                We can also have loop within another loop.
+
+                ex: for(let i = 1; i <= 5; i++) {
+                        console.log(i);
+
+                        for (let j = 1; j <= 3; j++) {
+                            console.log("Inner Loop" + j);
+                        }
+
+                    }
+
+
+
+          While Loop Syntax: while(condition){
+                                 //Loop to be repeated
+                               }
+
+
+                    ex: let i = 0;
+                        while (i <= 10) {
+                            console.log(i);
+                            i++;
+                        }
+
+          Do - While Loop Syntax: do{
+                                    //code to be repeated
+                                  }
+                                  while(condition);
+
+                    ex: let o = 1;
+                        do {
+                            console.log(o);
+                            o++;
+                        } while (o <= 5);
+
+        Note: There are some other loops like for-off, for-in which we gonna study in advanced js.
+
+12)Break & Continue Stats:
+
+            1)break Stats: it is used to terminate the loop immediately.
+
+            ex: for (let i = 0; i <= 5; i++) {
+                    if (i == 3) {
+                        break;
+                    }
+                    console.log(i);
+                }
+
+            2)continue Stats: it is used to skip the current iteration of the loop and the control flow of program goes to the next iteration.
+
+            ex: for (let i = 0; i <= 5; i++) {
+                    if (i == 3) {
+                        continue;
+                    }
+                    console.log(i);
+                }
+
+                here the stats at third iteration does'nt get executed and it jumps to the next part.
+
+13)Function: A Function is a block of code that performs a specific task.
+
+             Functions in Js are reusable blocks of code that can be called from anywhere in the program.
+
+                        Syntax: function func_Name(){
+                                //code to be executed
+                        }
+
+                        ex: function greet() {
+                                console.log("Hello, How are You");
+                            }
+                            greet();
+
+            Parameters and Argument:
+
+                    Parameters are the variables that are declared in the function definition.
+
+                    Args are the values that are passed to the function when it is called.
+
+                        function greet(firstName, lastName) {
+                        console.log("Hello " + firstName + " " + lastName);
+                        }
+
+                        greet("depak", "jay");
+
+                        so we can pass any datatypes as arguments during the function call.
+
+                        Also, We can pass less or more args while calling a function.
+
+                        But If we pass less args then the rest of the paramters will become undefined.
+                        ex: greet("Sharma"); -> Hello Sharma Undefined (result)
+
+                        And if we pass more args then additional args will be ignored.
+                        ex: greet(100, 200, 300); -> Hello 100 200 (result)
+
+            Default Parameters: Dfp in Js are pmt's that have default value.
+
+                                i.e if the args are not passed to the functon, then the default values are used.
+
+
+                                ex1: function add(x, y = 10) {
+                                        console.log(x + y); - 20(result)
+                                     }
+                                     add(10);
+
+                                ex2: function add(x, y = 10) {
+                                        console.log(x + y);  - 50 (result) {here 20 overides 10}
+                                     }
+                                     add(30,20);
+
+                                ex3: function add(x, y) {
+                                        console.log(x + y);  - NaN (Not a Number)
+                                     }
+                                     add(10);  - because it adds in this way (10 + undefined)
+
+
+            Return Statement: return stat is used to return the value when the funcion is called.
+
+                              It denotes that function has ended and any code after return is not executed.
+
+                              ex: function add(a, b) {
+                                    return a + b;
+                                    console.log("HI");
+                                  }
+                                  let result = add(10, 20);
+                                  console.log(result);
+
+
+            We can have nested functions i.e function within another function.
+
+                function fn1(x) {
+                    function fn2(y) {
+                        return x * y;
+                    }
+                return fn2;
+                }
+
+                let result = fn1(3);
+                console.log(result(3));
+
+<------------------------------------------------------------------------------------------------------------------>
+A closure in JavaScript is like a memory superpower for functions. It happens when an inner function (a function inside another function) "remembers" the variables from its outer function even after the outer function has finished running.
+
+                Closures are super handy for things like creating private variables or functions, where you want some data to stay hidden or be accessible only through certain functions. Think of it like a secret vault that only the inner function has the key to 🔐.
+
+                So in short: Closure = Inner function + Memory of the outer function's variables.
+
+<------------------------------------------------------------------------------------------------------------------>  
+ -->
+
+<!--14)Call-Backs : A Cb is an function which is passed as an argument to another function.
+
+                A Cb function can run after another function has finished.
+
+
+                function f1(result) {
+                    console.log(result);
+                }
+                function f2(a, b, sum) {
+                    let c = a + b;
+                    f1(c);
+                }
+                f2(10, 20, f1);
+
+
+[------------------------------------------------------------------------------------------------------------------]
+        A callback function in JavaScript is a function that is passed as an argument to another function and is executed after some operation is completed. It allows functions to be called asynchronously, which is useful for tasks like handling events, making API calls, or processing data once a task is done.
+
+        * A callback function is a function passed to another function to be executed later, typically after some asynchronous task finishes.
+
+        * Callbacks allow JavaScript to handle long-running operations without blocking the rest of the code.
+
+        * They are widely used in asynchronous programming for tasks like making network requests, waiting for user interactions, or handling events.
+[------------------------------------------------------------------------------------------------------------------]
+
+
+15)Anonymous Function: Anony_Func in Js, are functions that are not declared with a name.
+
+                Syntax :   function(parameters){
+                            //code to be executed
+                          }
+
+                We can even pass parameters in Anonymous-functions
+
+                ex1:    let sum = function (x, y) {
+                            return x + y;
+                        }                       // It is called Function Expression.
+                        console.log(sum(10, 15));
+
+                ex2:    (function(){
+                        console.log("HI");
+                        })();  - It gets immediately executed.
+
+                ex3:    setTimeout(function () {
+                        console.log("HI");
+                        }, 6000);
+
+
+
+    An anonymous function in JavaScript is a function that is not given a name. It's often used when you need a function for a short period of time, such as for callbacks, event handlers, or immediately-invoked functions. These functions can be created and used in place without the need to explicitly name them.
+
+    Why Use Anonymous Functions?
+
+    Simplicity: They're great for quick, one-off tasks where you don’t need to reuse the function.
+
+    Readability: In some cases, they make code more concise and readable (especially with arrow functions).
+
+    Encapsulation: Anonymous functions in IIFEs help avoid polluting the global namespace by encapsulating variables in local scopes.
+
+16)Recursive Function: A Rf in Js is a function that calls itself.
+
+                       A Rf should have an condition otherwise it calls itself infinitely.
+
+                       So for that we can use any conditional stats mostly if-else block.
+
+
+                        ex: function myFunction() {
+                                if (condition) {
+                                    myFunction();
+                                } else {
+                                    //Stop calling recursion
+                                }
+                            }
+                            myFunction();
+
+                        ex1: function countDown(num) {
+                                console.log(num);
+                                num--;
+                                if (num >= 0) {
+                                    countDown(num);
+                                }
+                             }
+                             countDown(10); -> Rf to print given number in an descending order
+
+-->
+<!-- 17) Object in Js: Object in Js is a non-primitive data-type that allows you to store multiple
+ collections of data .
+
+            Syntax: const obj_Name = {
+                    key1: value1,
+                    key2: value2,
+                    };
+
+              We can use let keyword alos but it is better to use const.
+
+                const person = {
+                    firstName: "Ajay",
+                    lastName: "Shukla",
+                    age: 24,
+                };
+                console.log(person);
+
+                * All data in obj's is stored in the form of key-value pair.
+                * This key-value pair is termed as properties.
+
+                here key - firstName, lastName
+                     value - "Ajay", "Shukla"
+
+                     and key is in form of string so we can even write firstName as "firstName" or 'firstName' .
+
+                     In value we can add any data type even an object.
+
+
+                When we declare a function as an value in key:value pair then it is known as Methods.
+
+                1)How to Access properties of an Object:
+
+                    We can do it using keyname as well as dot operator with value.
+
+                    syntax1: obj_Name.key;
+                    syntax2: obj_Name["key"]
+
+                    ex1:console.log(person.firstName); - Ajay
+                    ex2;console.log(person["lastName"]); - Shukla
+                --------------------------------------------------------
+                    const person = {
+                        "first Name" : "Ajay",
+                        lastName: "Shukla",
+                        age: 24,
+                    };
+                    console.log(person.first Name); -- gives an error so we need to use bracket notation. i.e console.log(person["first Name"]);
+                --------------------------------------------------------
+
+                2)How to Update Properties in obj:
+
+                    We can do it in this way -  person.gender = "Male";
+                                                person.company = "IBM";
+
+                3)To Delete a property from the Object:
+
+                    We use delete keyword to perform delete operation.
+
+                    i.e delete person.age; - deletes the age key in person obj.
+
+
+                4)We can assign object as an value for a key in object (Nested Object)
+
+                const person = {
+                    firstName: "Ajay",
+                    lastName: "Shukla",
+                    age: 24,
+                    address: {
+                        street: "Tesla Road",
+                        city: "Austin",
+                        state: "Texas",
+                        country: "US",
+                    },
+                  };
+
+                console.log(person.address.city);
+                console.log(person);
+
+                person.address.area = "sklm";
+
+                5)How to Check If a property exist in an obj?
+
+                    To check so we use ( in ) operator: propertyName in objectName
+
+                    i.e console.log("lastName" in person); - we should always mention property in double quotes. and if it exist it returns true, else it returns false.
+
+                6)To display all properties of an obj without knowing it's name we use for-in  loop.
+
+                    for-in loop allows you to access each property and value of an object without knowing the specific name of property.
+
+                        for (let i in person) {
+                            console.log(i);
+                        }
+
+                    To access the value's in the obj we use:
+
+                        for (let i in person) {
+                            console.log(person[i]);
+                        }
+
+                    To print both key and value we use:
+
+                        for (let i in person) {
+                            console.log(i + " " + person[i]);
+                        }
+
+
+    There are multiple ways to creat obj's in Js where in the above declarations we use obj literals.
+
+2nd - Way to create an Object;
+
+    1)  We use new keyword to create an obj.
+
+                const person = new Object();
+                person.firstName = "Elon";
+                person.lastName = "Musk";
+
+                console.log(person);
+
+    2)  We can even declare the properties in this way:
+
+                const person = new Object({
+                firstName: "Elon",
+                lastName: "Musk",
+                age: 39,
+                });
+
+                console.log(person);
+-->
+
+<!--18) Object Methods and this Keyword:
+
+        Js method is an object property that contains a function definition.
+
+        const person = {
+            firstName: "Elon",
+            lastName: "Musk",
+            greet: function greet() {
+                console.log("Hello World");
+            },
+        };
+        person.greet();
+
+        We can also use anonymous function for creating obj method.
+
+        const person = {
+            firstName: "Elon",
+            lastName: "Musk",
+            greet: function () {
+                console.log("Hello World");
+            },
+        };
+        person.greet();
+
+        We can even create function outside of obj and assign it as an property.
+
+            const person = {
+                firstName: "Elon",
+                lastName: "Musk",
+            };
+
+            function greet() {
+                console.log("HI");
+            }
+            person.greetings = greet;
+            person.greetings(); - HI
+            console.log(person);
+
+        Es-6 provides some other way to do this thing:
+
+            const person = {
+                firstName: "Elon",
+                lastName: "Musk",
+                greet() {
+                    console.log("HI");
+                },
+            };
+            person.greet();
+
+this Keyword: To access the properties of an obj within a method of the same object, we can use
+                "this" keyword.
+
+                const person = {
+                    firstName: "Elon",
+                    lastName: "Musk",
+                    greet: function () {
+                        console.log("Hello " + this.firstName);
+                    },
+                };
+                console.log(person.firstName);
+                console.log(person.greet());
+
+               * for outside of the function we can use objectName.keyName
+               * for inside of the function we can use this.keyName.
+
+               So when we refer to the this keyword within a method, it refers to the same object.
+
+
+               ex: for, this keyword
+
+               const person = {
+                    firstName: "Elon",
+                    lastName: "Musk",
+                    getFullName: function () {
+                        return this.firstName + " " + this.lastName;
+                    },
+                };
+                console.log(person.getFullName());
+
+
+Note : If we use "this" keyword alone, or inside a function.Then it will refer to the Global
+       object, that is "window" object.
+
+       ex: console.log(this); - type this in .js file to see the result in console.
+
+       Or, When we use "this" keyword in the "Event" then it will refer to the element that receive the event. - (remember this point lets learn about it later)
+
+        "this" is a keyword, it is not a variable, so we can't change the value of "this"
+
+-->
+
+<!--19) Constructors in Js:
+
+
+            In js, a constructor function is used to create objects.
+
+            function Person() {
+                this.firstName = "Elon",
+                this.lastName = "Musk";
+            }
+
+            we can only create 1 obj by using previous steps
+            but by using this constructors concept in js, we can create multiple objects.
+
+            Constructor Function is similar as a regualr function but it is good to capitalize the first letter of you constructor function.
+
+            A CF should only be called with the new keyword.
+
+            We can use "new" operator to create an Object from an constructor function.
+
+                function Person() {
+                    this.firstName = "Elon",
+                    this.lastName = "Musk";
+                }
+                const person1 = new Person(); this --refersTo-- person1
+                const person2 = new Person(); this --refersTo-- person2
+
+                console.log(person1); content of Person is transfered to person1 and it get printed.
+                console.log(person2); content of Person is transfered to person2 and it get printed.
+
+
+            Whenever an object is created using Constructor Function this keyword represents or refer to the newly created object.
+
+            We can also pass parameters.
+
+                ex:function Person(first, last) {
+                    (this.firstName = first),
+                    (this.lastName = last);
+                }
+
+                const person1 = new Person("Elon", "Musk");
+                const person2 = new Person("Bill", "Gates");
+
+                console.log(person1);
+                console.log(person2);
+
+
+            Adding property to object from outside:
+
+                function Person(first, last) {
+                    (this.firstName = first), (this.lastName = last);
+                }
+
+                const person1 = new Person("Elon", "Musk");
+                const person2 = new Person("Bill", "Gates");
+
+                person1.age = 52;
+
+                console.log(person1); - prints the whole info of person with age
+                console.log(person1.age); - 52
+                console.log(person2); - prints the whole info of person without age
+                console.log(person2.age); -undefined
+
+            Creating Function or Adding a function from outside for person2 obj:
+
+                function Person(first, last) {
+                    (this.firstName = first), (this.lastName = last);
+                }
+
+                const person1 = new Person("Elon", "Musk");
+                const person2 = new Person("Bill", "Gates");
+
+                person1.age = 52;
+
+                person2.greet = function () {
+                console.log("Hello, Great Stack");
+                };
+
+                person2.greet(); - Hello, Great Stack
+
+
+            Creating Function inside the CF:
+
+                function Person(first, last) {
+                    this.firstName = first,
+                    this.lastName = last;
+                    this.getFullName = function () {
+                        return this.firstName + " " + this.lastName;
+                    };
+                }
+
+                const person1 = new Person("Elon", "Musk");
+                const person2 = new Person("Bill", "Gates");
+
+                console.log(person1.getFullName()); Elon Musk
+                console.log(person2.getFullName()); BIll Gates
+
+
+            The main problem with this CF is that it creates method getFullName in all the objects created which is not that memory efficient so to prevent this we use prototype.
+         -->
+
+<!--20) Prototype in Js:
+
+        In Js every function and object, has its own prototype.
+
+        A Prototype is itself an object so prototype has its own prototype which is again an object so it creates a prototype chain.
+
+    Prototype Inheritence:
+
+        We can use the Prototype to add properties and methods to a constructor function.
+
+        And object inherit the propeties and methods from a  prototype.
+
+            function Person(fName, lName) {
+                this.firstName = fName,
+                this.lastName = lName;
+            }
+            Person.age = 34; - it is not possible.
+
+
+        After the declaration of th CF we can not add the properties or methods from outside so for that we can use prototype.
+
+
+        Adding propeties in Cf using Prototype:
+
+            function Person(fName, lName) {
+                this.firstName = fName,
+                this.lastName = lName;
+            }
+
+            Person.prototype.gender = "Male";
+
+            const person1 = new Person("Elon", "Musk");
+            const person2 = new Person("Bill", "Gates");
+
+            console.log(person1); - prints the gender in prototype of obj1
+            console.log(person2); - prints the gender in prototype of obj2
+
+            console.log(person1.gender); - Male
+            console.log(person2.gender); - Male
+
+        Here the gender is added to the prototype which is inherited by all the objects so we can see the gender in prototypes of every object created from the CF.
+
+
+        Adding METHOD in Cf using Prototype:
+
+            function Person(fName, lName) {
+            (this.firstName = fName), (this.lastName = lName);
+            }
+
+            Person.prototype.getFullName = function () {
+            return this.firstName + " " + this.lastName;
+            };
+
+            const person1 = new Person("Elon", "Musk");
+            const person2 = new Person("Bill", "Gates");
+
+            console.log(person2.getFullName()); - we use this and read the point1 to understand.
+
+    point1:here getFullName is not copied or added to person1 and person2 obj instead it is
+           inherited so to use or access it we need to call it.
+
+
+            What happens if we change the prototype value?
+
+                function Person() {
+                    this.name = "Elon";
+                }
+                Person.prototype.age = 34; - assigned to person1
+
+                const person1 = new Person(); - previously created object.
+
+                Person.prototype = { age: 54 }; - assigned to person2
+
+                const person2 = new Person(); - newly created object.
+
+                console.log(person1.age); - 34
+                console.log(person2.age); - 54
+
+            So If a prototype value is changed, then all the new objects will have the changed property value.
+
+            And all the previously created objects will have the previous value.
+
+-->
+
+<!--21) Object Destructuring:
+
+            Object Destructuring in Js is a feature that allows you to extract the properties of an object into variables.
+
+            *)It is usefull in assigning the properties of an object to variables in a single statement.
+
+            const person = {
+                firstName: "Elon",
+                lastName: "Musk",
+            };
+
+            let name = person.firstName;
+            console.log(name); - Elon
+
+            1)so this is the prev syntax or structure to store a property in an varible. but now es6 provides some new way to do things.
+
+
+            syntax : let { property1: variable1, property2: variable2 } = object;
+
+                ex: const person = {
+                        firstName: "Elon",
+                        lastName: "Musk",
+                    };
+
+                    let { firstName: fName, lastName: lName } = person;
+
+                    console.log(fName);
+                    console.log(lName);
+
+            2)If at all there is an case were property name is similar to variable name we can use this synatx.
+
+                ex: const person = {
+                    firstName: "Elon",
+                    lastName: "Musk",
+                    };
+
+                    let { firstName, lastName } = person;
+
+                    console.log(firstName);
+                    console.log(lastName);
+
+            Since it is not required to mention variable name as they both were similar.
+
+            3) What happens if we overwrite the property in the outerside single line of code(es6)?
+
+                const person = {
+                firstName: "Elon",
+                lastName: "Musk",
+                age: 56,
+                };
+
+                let { firstName, lastName, age = 32 } = person;
+
+                console.log(firstName);
+                console.log(lastName);
+                console.log(age); - 56
+
+                here the property in the obj overwrites the default value in the age.
+
+                ------------
+            4) also if  we add an property without assigning any value  i.e not existing in obj and print it, It displays as null.
+
+                    ex: const person = {
+                        firstName: "Elon",
+                        lastName: "Musk",
+                        };
+
+                        let { firstName, lastName, age } = person;
+
+                        console.log(firstName);
+                        console.log(lastName);
+                        console.log(age); - undefined.
+
+
+    Object Literal Extension in es6:
+
+    fig-01:
+            let firstName = "Elon";
+            let lastName = "Musk";
+
+            const person = {
+                firstName,
+                lastName,
+            };
+
+            console.log(person);
+
+        We can directly declare variables and assign values outside of obj and write those varName inside the obj so they act as properties. see the fig-01.
+-->
+
+<!--22) Js Classes:
+
+        Js Classes are one of the features introduced in the ES6 version of Js.
+
+        Class is a template for creating obj's
+
+        To create a class we use class keyword and name of the class and within the class we need to always mention a constructor method.
+
+        Synatx:     class ClassName {
+                        constructor() {
+
+                        }
+                    }
+
+                    here class name should always be capital.
+
+        ex:     class Person {
+                constructor(name, age) {
+                    this.ame = name;
+                    this.age = age;
+                }
+                }
+
+                const person1 = new Person("Elon", 59);
+                const person2 = new Person("Bill Gates", 79);
+
+                console.log(person1);
+                console.log(person2);
+
+                The const method automatically makes the property of an object to initialized whenever an obj is created from Class.
+
+Js Class Methods - We can add any no of methods in js class.
+
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            greet() {
+                return "Hello" + " " + this.name;
+            }
+        }
+
+        const person1 = new Person("Elon", 59);
+        const person2 = new Person("Bill Gates", 79);
+
+        console.log(person1);
+        console.log(person1.greet());
+
+        * now this greet() is available in in prototype of obj so we can use obj.function() to call it.
+
+            class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            greet() {
+                return "Hello" + " " + this.name;
+            }
+            changeName(newName) {
+                this.name = newName;
+            }
+            }
+
+            const person1 = new Person("Elon", 59);
+            const person2 = new Person("Bill Gates", 79);
+
+            console.log(person1);
+
+            console.log(person1.greet());
+
+            person1.changeName("Avinash");
+            console.log(person1);
+            console.log(person1.name); -->
+
+<!--23) Getters and Setters in Js:
+
+        G & S are special methods in Js that allow you to control how properties are accessed and modified.
+
+        They are defined using get & set keyword.
+
+        A getter is a method that is called when a property is accessed.It can be used to do things like validate the value  of the property or convert it to an diff format.
+
+        NORMALLY, WHEN WE SEE HERE BELOW WE CALL THE FUNCTION WITH ()
+
+            class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            greet() {
+                return "Hello" + " " + this.name;
+            }
+            }
+
+            const person1 = new Person("Elon", 59);
+            const person2 = new Person("Bill Gates", 79);
+
+            console.log(person1.greet());
+
+        BUT WITH THE USE OF G & S METHODS WE CAN DIRECTLY CALL WITHOUT() I.E
+
+            class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            get greet() {
+                return "Hello" + " " + this.name;
+            }
+            }
+
+            const person1 = new Person("Elon", 59);
+            const person2 = new Person("Bill Gates", 79);
+
+            console.log(person1.greet);
+
+        so the above code that has greet() method is an example of getter Method.
+
+        Ex of Setter Method:
+
+            class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            get greet() {
+                return "Hello" + " " + this.name;
+            }
+            set changeName(name) {
+                this.name = name;
+            }
+            }
+
+            const person1 = new Person("Elon", 59);
+            const person2 = new Person("Bill Gates", 79);
+
+            console.log(person1.greet);
+            console.log((person1.changeName = "Avinash"));
+
+            console.log(person1);
+
+        A setter is a method that is called when a property is modified. It can be used to do things like update the value of the property or perform some other actions.
+
+        We can use same method as getter and setter.
+
+                ex: class Person {
+                    constructor(name, age) {
+                        this.name = name;
+                        this.age = age;
+                    }
+                    get personName() {
+                        return "Hello" + " " + this.name;
+                    }
+                    set personName(name) {
+                        this.name = name;
+                    }
+                    }
+
+                    const person1 = new Person("Elon", 59);
+                    const person2 = new Person("Bill Gates", 79);
+
+                    console.log(person1.personName);
+                    person1.personName = "Avinash";
+                    console.log(person1.personName);
+ -->
+
+<!--24) Js Class Expression:
+
+        Js class expression -  alternative way to define a new class.
+
+        It is similar to func expression, but it uses the class keyword instead of func keyword.
+
+        Class Expression can be named or un-named.
+
+        If they are named, the name can be used to refer to the class later.
+
+        else If they are un-named, they can only be referred by the variable that they are assigned to.
+
+
+                let Person = class {
+                constructor(name) {
+                    this.name = name;
+                }
+                get getName() {
+                    return this.name;
+                }
+                };
+
+                const person1 = new Person("Elon");
+                console.log(person1);
+                console.log(person1.getName);
+ -->
+
+<!--25) Js Class Inheritence:
+
+        Js class inheritence allows you to create new class on the basis of already existing class.
+
+        Using class inheritence a class can inherit all the method and properties of another class.
+
+        It helps in code reusability.
+
+        we use "extend" keyword to establish class inheritence.
+
+            ex: class Person {
+                    constructor(name) {
+                        this.name = name;
+                    }
+                    greet() {
+                        console.log("Hello " + this.name);
+                    }
+                }
+
+                class Student extends Person {}
+
+                const student1 = new Student("Peter");
+
+                student1.greet(); - Hello Peter -->
+
+<!--26) Js Super Method:
+
+    The super() method used inside an child class denotes its parent class.
+
+        ex:class Person {
+                constructor(name) {
+                    this.name = name;
+                }
+                greet() {
+                    console.log("Hello " + this.name);
+                }
+           }
+
+        class Student extends Person {
+        constructor(name) {
+            super(name);
+        }
+        }
+
+        const student1 = new Student("Peter");
+
+        student1.greet();
+
+         -->
+
+<!--27) Method or Property overriding:
+
+        If the parent and child class has the same method or property name. In this case, when we will call the method or property of an Object of child class, it will override the method or property of the parent class.
+
+        This is known to be method overriding or shadowing method.
+
+            ex:class Person {
+                constructor(name) {
+                    this.name = name;
+                }
+                greet() {
+                    console.log("Hello " + this.name);
+                }
+            }
+
+            class Student extends Person {
+                greet() {
+                    console.log("Hello Student " + " " + this.name);
+                }
+            }
+
+            const student1 = new Student("Peter");
+
+            student1.greet(); - Hello Student Peter
+-->
+
+<!--28) Static Methods :
+
+        SM are bound to a class, but not to the instances of the class. So you cannot call SM with an object, It can only be called with the class.
+
+            ex:class Person {
+                constructor(name) {
+                    this.name = name;
+                }
+                static greet() {
+                    console.log("Hello");
+                }
+            }
+            const person1 = new Person("Peter");
+
+            Person.greet();
+
+
+            If you wanted to use the object's properties inside the static method, then you can pass the object as the parameter.
+
+                ex:class Person {
+                    constructor(name) {
+                        this.name = name;
+                    }
+                    static greet(x) {
+                        console.log("Hello" + " " + x.name);
+                    }
+                }
+                const person1 = new Person("Peter");
+
+                Person.greet(person1);
+
+-->
+
+<!--29) Js Private Methods:
+
+    PM can only be accessed within the class we can't access PM outside of that class.
+
+    By default, methods of an class are public. To make the methods private, we need to start the method with #.
+
+        ex:class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+            #fullName() {
+                return this.firstName + " " + this.lastName;
+            }
+            display() {
+                console.log(this.#fullName());
+            }
+        }
+
+        const person1 = new Person("Elon", "Musk");
+
+        person1.display();
+-->
+
+<!--30) Private Static Method:
+
+        when we place static keyword before private method, It becomes private static method.
+
+        to call or to access the PS Method we need to use Class Name
+
+            ex:class Person {
+                constructor(firstName, lastName) {
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                }
+                static #fullName(x) {
+                    return x.firstName + " " + x.lastName;
+                }
+                display() {
+                    console.log(Person.#fullName(this));
+                }
+            }
+
+            const person1 = new Person("Elon", "Musk");
+
+            person1.display(); - Elon Musk.
+ -->
